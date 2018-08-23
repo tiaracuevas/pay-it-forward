@@ -1,0 +1,10 @@
+.opportunities {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-radius: 10px;;
+  padding: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
