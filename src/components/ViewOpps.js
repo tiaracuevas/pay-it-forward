@@ -77,30 +77,45 @@ class ViewOppsPage extends React.Component {
         <Navigation />
    
         
-         <h1>View Opportunities</h1>
-     
+         <h1>Go ahead and find your way to give back!</h1>
+         <h5>Just click the sign up button and get volunteering.</h5>
+
         
          <section className='display-opportunites'>
             <div className="wrapper">
              <ul>
             {this.state.opportunities.map((opportunity) => {
         return (
+    <div className="opportunities pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"> 
+        <div className="container">
           <div key={opportunity.id}>
-            <h3>{opportunity.opportunityName}</h3>
-            <p>Date: {opportunity.date}</p>
-            <p>Address: {opportunity.address}</p>
-            <p>Time: {opportunity.timeframe}</p>
-            <p>Description: {opportunity.description}</p>
-            <p>Category: {opportunity.category}</p>
-            <p>ID: {opportunity.id} </p>
-            
-            
-            
-            <button onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address)}>Sign Up</button>
-            
-            
-               
+            <div className="row">
+              <div className="col-sm-12">
+                <h3>{opportunity.opportunityName}</h3>
+                <p>{opportunity.category}</p>
+            </div>
           </div>
+          <div className="row">
+            <div className="col-sm-4">
+              <p>Date: {opportunity.date}</p>
+            </div>
+            <div className="col-sm-4">
+            <p>Address: {opportunity.address}</p>
+            </div>
+            <div className="col-sm-4">
+            <p>Time: {opportunity.timeframe}</p>
+            </div>
+            </div>
+            <div className="row">
+            <div className="col-sm-12">
+            <p>Description: {opportunity.description}</p>
+            </div>
+            </div>
+           {/*} <p>ID: {opportunity.id} </p>*/}
+            <button onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address)}>Sign Up</button>
+          </div>
+        </div>
+      </div>
         )
       })}
     </ul>

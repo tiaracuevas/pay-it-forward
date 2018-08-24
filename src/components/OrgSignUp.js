@@ -53,7 +53,6 @@ class OrgSignUpForm extends Component {
             missionStatement,
             website
 
-
         } = this.state;
 
         const {
