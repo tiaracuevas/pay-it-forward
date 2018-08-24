@@ -71,14 +71,15 @@ class SignUpForm extends Component {
                 db.doCreateUser(authUser.user.uid, displayName, email, photoURL)
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });
-                        
                         history.push(routes.HOME);
+                        firebase.auth().currentUser.updateProfile({ displayName: displayName })
+                        window.location.reload();
 
                     })
-                   .then(() => {
-                       firebase.auth().currentUser.updateProfile({ displayName: displayName })
-                       window.location.reload();
-                    })
+                //    .then(() => {
+                //        firebase.auth().currentUser.updateProfile({ displayName: displayName })
+                //        window.location.reload();
+                //     })
                    
                    
                     .catch(error => {

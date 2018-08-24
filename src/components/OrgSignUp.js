@@ -69,13 +69,14 @@ class OrgSignUpForm extends Component {
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });
                         history.push(routes.ORG_HOME);
-
-                    })
-                    .then(() => {
                         firebase.auth().currentUser.updateProfile({ displayName: displayName })
                         window.location.reload();
+                    })
+                    // .then(() => {
+                    //     firebase.auth().currentUser.updateProfile({ displayName: displayName })
+                    //     window.location.reload();
                         
-                     })
+                    //  })
                     .catch(error => {
                         this.setState(byPropKey('error', error));
                     });
