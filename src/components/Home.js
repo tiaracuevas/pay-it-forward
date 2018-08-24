@@ -56,8 +56,10 @@ class HomePage extends Component {
       <div>
         <Navigation />
         <h1>Home</h1>
+        <p>Hello, {firebase.auth().currentUser.displayName}</p>
+        <img src={firebase.auth().currentUser.photoURL || 'https://via.placeholder.com/200x200'} alt="Uploaded images" height="200" width="200" />
 
-        <Link to={routes.VIEW_OPPS}>All Opportunities</Link>
+        <p><Link to={routes.VIEW_OPPS}>All Opportunities</Link></p>
 
         <p>This is like the profile page.</p>
 

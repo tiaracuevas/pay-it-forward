@@ -8,6 +8,7 @@ import * as firebase from 'firebase'
 import * as routes from '../constants/routes';
 import { auth, db } from '../firebase';
 import OrgNavigation from './OrgNavigation'
+import ImageUpload from './ImageUpload'
 
 
 const OrgSignUpPage = ({ history }) =>
@@ -153,6 +154,8 @@ class OrgSignUpForm extends Component {
                     type="text"
                     placeholder="Website"
                 />
+
+                
 
                 <button disabled={isInvalid} type="submit">
                     Sign Up

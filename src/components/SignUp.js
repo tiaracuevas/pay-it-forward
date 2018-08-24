@@ -11,6 +11,7 @@ import * as routes from '../constants/routes';
 
 import { auth, db } from '../firebase';
 import Navigation from './Navigation';
+import ImageUpload from './ImageUpload'
 
 
 
@@ -29,6 +30,7 @@ const INITIAL_STATE = {
     passwordTwo: '',
     error: null,
     displayName: '',
+    photoURL: '',
 
 };
 
@@ -53,6 +55,7 @@ class SignUpForm extends Component {
             displayName,
             email,
             passwordOne,
+            photoURL
 
 
         } = this.state;
@@ -65,7 +68,7 @@ class SignUpForm extends Component {
             .then(authUser => {
 
 
-                db.doCreateUser(authUser.user.uid, displayName, email)
+                db.doCreateUser(authUser.user.uid, displayName, email, photoURL)
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });
                         history.push(routes.HOME);
@@ -133,6 +136,9 @@ class SignUpForm extends Component {
                         type="password"
                         placeholder="Confirm Password"
                     />
+
+                    
+
                     <button disabled={isInvalid} type="submit">
                         Sign Up
                 </button>

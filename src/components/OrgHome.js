@@ -63,6 +63,7 @@ class OrgHomePage extends Component {
         <p>The Org Profile Page.</p>
 
         <p>Hello, {firebase.auth().currentUser.displayName}</p>
+        <img src={firebase.auth().currentUser.photoURL || 'https://via.placeholder.com/200x200'} alt="Uploaded images" height="200" width="200" />
 
         <h1>My Posted Opportunities</h1>
 

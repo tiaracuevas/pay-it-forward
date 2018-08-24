@@ -6,10 +6,11 @@ import React from 'react';
 // User API
 
 //create user in db
-export const doCreateUser = (id, displayName, email) =>
+export const doCreateUser = (id, displayName, email, photoURL) =>
     db.ref(`users/${id}`).set({
         displayName,
         email,
+        photoURL
     });
 
 
