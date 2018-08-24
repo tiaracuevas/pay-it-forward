@@ -28,6 +28,7 @@ class HomePage extends Component {
           id: opportunity,
           opportunityName: opportunities[opportunity].opportunityName,
           date: opportunities[opportunity].date,
+          timeframe: opportunities[opportunity].timeframe,
           description: opportunities[opportunity].description,
           address: opportunities[opportunity].address,
           category: opportunities[opportunity].category,
