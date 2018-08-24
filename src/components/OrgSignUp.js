@@ -24,6 +24,7 @@ const INITIAL_STATE = {
     passwordTwo: '',
     error: null,
     displayName: '',
+    website: ''
 
 };
 
@@ -49,7 +50,8 @@ class OrgSignUpForm extends Component {
             email,
             passwordOne,
             phoneNumber,
-            missionStatement
+            missionStatement,
+            website
 
 
         } = this.state;
@@ -62,7 +64,7 @@ class OrgSignUpForm extends Component {
             .then(authUser => {
 
                 // Create a user in your own accessible Firebase Database too
-                db.doCreateOrg(authUser.user.uid, displayName, email, phoneNumber, missionStatement)
+                db.doCreateOrg(authUser.user.uid, displayName, email, phoneNumber, missionStatement, website)
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });
                         history.push(routes.ORG_HOME);
@@ -94,7 +96,8 @@ class OrgSignUpForm extends Component {
             passwordTwo,
             error,
             phoneNumber,
-            missionStatement
+            missionStatement,
+            website
         } = this.state;
 
         const isInvalid =
@@ -142,6 +145,13 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('missionStatement', event.target.value))}
                     type="text"
                     placeholder="Mission Statement"
+                />
+
+                <input
+                    value={website}
+                    onChange={event => this.setState(byPropKey('website', event.target.value))}
+                    type="text"
+                    placeholder="Website"
                 />
 
                 <button disabled={isInvalid} type="submit">

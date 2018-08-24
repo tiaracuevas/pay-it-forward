@@ -29,7 +29,7 @@ class OrgHomePage extends Component {
         newState.push({
           id: opportunity,
           opportunityName: opportunities[opportunity].opportunityName,
-          time: opportunities[opportunity].timeframe,
+          timeframe: opportunities[opportunity].timeframe,
           date: opportunities[opportunity].date,
           description: opportunities[opportunity].description,
           address: opportunities[opportunity].address,
@@ -62,7 +62,7 @@ class OrgHomePage extends Component {
 
         <p>The Org Profile Page.</p>
 
-
+        <p>Hello, {firebase.auth().currentUser.displayName}</p>
 
         <h1>My Posted Opportunities</h1>
 

@@ -36,7 +36,7 @@ class ViewOppsPage extends React.Component {
                 newState.push({
                     id: opportunity,
                     opportunityName: opportunities[opportunity].opportunityName,
-                    time: opportunities[opportunity].timeframe,
+                    timeframe: opportunities[opportunity].timeframe,
                     date: opportunities[opportunity].date,
                     description: opportunities[opportunity].description,
                     address: opportunities[opportunity].address,

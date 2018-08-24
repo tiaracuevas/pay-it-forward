@@ -7,6 +7,7 @@ import withAuthorization from './withAuthorization';
 
 import OrgNavigation from './OrgNavigation';
 
+
 const OrgAccountPage = () =>
   <AuthUserContext.Consumer>
     {authUser =>
@@ -19,6 +20,7 @@ const OrgAccountPage = () =>
       </div>
     }
   </AuthUserContext.Consumer>
+
 
 const authCondition = (authUser) => !!authUser;
 
