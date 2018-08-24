@@ -19,13 +19,13 @@ const AccountPage = () =>
         <h1>Name: {authUser.displayName}</h1>
         <p>UID: {authUser.uid}</p>
         <p>Profile Photo:</p>
-        <img src={firebase.auth().currentUser.photoURL || 'https://via.placeholder.com/200x200'} alt="Uploaded images" height="200" width="200" />
+        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" height="200" width="200" />
 
         <PasswordForgetForm />
         <PasswordChangeForm />
 
         <div>
-        <h2>Add/Edit your profile picture</h2>
+        <h2>Add your profile picture</h2>
         <ImageUpload  />
         </div>
       </div>

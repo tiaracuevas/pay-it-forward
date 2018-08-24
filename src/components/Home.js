@@ -32,6 +32,7 @@ class HomePage extends Component {
           description: opportunities[opportunity].description,
           address: opportunities[opportunity].address,
           category: opportunities[opportunity].category,
+          photoURL: opportunities[opportunity].photoURL,
 
         });
       }
@@ -57,7 +58,7 @@ class HomePage extends Component {
         <Navigation />
         <h1>Home</h1>
         <p>Hello, {firebase.auth().currentUser.displayName}</p>
-        <img src={firebase.auth().currentUser.photoURL || 'https://via.placeholder.com/200x200'} alt="Uploaded images" height="200" width="200" />
+        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" height="200" width="200" />
 
         <p><Link to={routes.VIEW_OPPS}>All Opportunities</Link></p>
 
@@ -79,6 +80,7 @@ class HomePage extends Component {
                     <p>Address: {opportunity.address}</p>
                     <p>Description: {opportunity.description}</p>
                     <p>Category: {opportunity.category}</p>
+                    <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} height="100" width="100" />
 
 
                     <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>

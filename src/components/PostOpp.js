@@ -31,6 +31,7 @@ const INITIAL_STATE = {
     description: '',
     category: 'default',
     postedBy: '',
+    photoURL: '',
     error: null,
 };
 
@@ -60,6 +61,7 @@ class PostOppForm extends Component {
             description,
             category,
             postedBy,
+            photoURL
 
 
         } = this.state;
@@ -68,7 +70,7 @@ class PostOppForm extends Component {
             history,
         } = this.props;
         var user = firebase.auth().currentUser;
-        db.postOpp(id, opportunityName, date, numberOfVolunteers, timeframe, address, description, category, user.uid)
+        db.postOpp(id, opportunityName, date, numberOfVolunteers, timeframe, address, description, category, user.uid, user.photoURL)
             .then(() => {
                 this.setState({ ...INITIAL_STATE });
                 history.push(routes.ORG_HOME)

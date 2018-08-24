@@ -25,7 +25,7 @@ export const doCreateOrg = (id, displayName, email, phoneNumber, missionStatemen
         website
     });
 
-export const postOpp = (id, opportunityName, date, numberOfVolunteers, timeframe, address, description, category, postedBy) =>
+export const postOpp = (id, opportunityName, date, numberOfVolunteers, timeframe, address, description, category, postedBy, photoURL) =>
     db.ref(`/opportunities`).push({
         opportunityName,
         date,
@@ -34,7 +34,8 @@ export const postOpp = (id, opportunityName, date, numberOfVolunteers, timeframe
         address,
         description,
         category,
-        postedBy
+        postedBy,
+        photoURL
     });
 
 
