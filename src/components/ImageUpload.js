@@ -39,6 +39,7 @@ class ImageUpload extends Component {
                  firebase.auth().currentUser.updateProfile({ photoURL: photoURL })
                  window.location.reload();
              })
+             
             //complete function
             
         });
