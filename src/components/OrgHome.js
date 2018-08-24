@@ -62,7 +62,7 @@ class OrgHomePage extends Component {
 
         <p>The Org Profile Page.</p>
 
-
+        <p>Hello, {firebase.auth().currentUser.displayName}</p>
 
         <h1>My Posted Opportunities</h1>
 

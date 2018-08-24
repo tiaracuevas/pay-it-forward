@@ -8,6 +8,7 @@ import Navigation from './Navigation';
 
 
 const AccountPage = () =>
+
   <AuthUserContext.Consumer>
     {authUser =>
       <div>
@@ -20,6 +21,7 @@ const AccountPage = () =>
       </div>
     }
   </AuthUserContext.Consumer>
+
  
 
 const authCondition = (authUser) => !!authUser;

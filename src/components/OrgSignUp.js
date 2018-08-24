@@ -148,7 +148,7 @@ class OrgSignUpForm extends Component {
 
                 <input
                     value={website}
-                    onChange={event => this.setState(byPropKey('missionStatement', event.target.value))}
+                    onChange={event => this.setState(byPropKey('website', event.target.value))}
                     type="text"
                     placeholder="Website"
                 />
