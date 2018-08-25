@@ -1,0 +1,22 @@
+.delete-btn{
+  width:78px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: black;
+}
+
+.container{
+  margin-bottom: 10px;
+  /* border: 1px solid black; */
+  font-family: 'Fredoka One', cursive;
+}
+
+.oppName {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.all{
+  margin-right: 90px;
+}
