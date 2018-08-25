@@ -1,0 +1,39 @@
+.orgheader{
+    font-family: 'Fredoka One', cursive;
+}
+
+input{
+    font-size:20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+#emailbox{
+    margin-right: 400px;
+    width:400px;
+    height: 35px;
+    border-radius: 2px;
+    margin-bottom:20px;
+    font-size: 15px;
+}
+
+#passwordbox{
+    margin-right: 400px;
+    width: 400px;
+    height: 35px;
+    border-radius: 2px;
+    margin-bottom:20px;
+    font-size: 15px;
+}
+
+.signinbtn{
+    background-color: #007bff;
+    font-size:17px;
+    font-family: 'Fredoka One', cursive;
+    color: black;
+}
+
+.organization-login{
+    border-radius: 20px;
+    opacity: 0.9;
+}

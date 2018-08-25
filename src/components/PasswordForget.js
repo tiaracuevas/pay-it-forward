@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { auth } from '../firebase';
+import "./PasswordForget.css"
 
 const PasswordForgetPage = () =>
   <div>
@@ -66,7 +67,7 @@ class PasswordForgetForm extends Component {
 }
 
 const PasswordForgetLink = () =>
-  <p>
+  <p className="forgetpassword">
     <Link to="/pw-forget">Forgot Password?</Link>
   </p>
 

@@ -11,6 +11,7 @@ import * as routes from '../constants/routes';
 
 import { auth, db } from '../firebase';
 import Navigation from './Navigation';
+import "./SignUp.css";
 
 
 
@@ -145,8 +146,8 @@ class SignUpForm extends Component {
 }
 
 const SignUpLink = () =>
-    <p>
-        Don't have an account? (Individual User Sign Up)
+    <p className="usersignup">
+        Don't have an account? 
     {' '}
         <Link to={routes.SIGN_UP}>Sign Up</Link>
     </p>

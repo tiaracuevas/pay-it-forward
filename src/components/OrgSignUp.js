@@ -8,6 +8,7 @@ import * as firebase from 'firebase'
 import * as routes from '../constants/routes';
 import { auth, db } from '../firebase';
 import OrgNavigation from './OrgNavigation'
+import "./OrgSignUp.css";
 
 
 const OrgSignUpPage = ({ history }) =>
@@ -155,8 +156,8 @@ class OrgSignUpForm extends Component {
 }
 
 const OrgSignUpLink = () =>
-    <p>
-        Don't have an ORG account? Organization Sign Up
+    <p className="orgsignup">
+        Don't have an ORG account? Organization
     {' '}
         <Link to={routes.ORG_SIGN_UP}>Sign Up</Link>
     </p>

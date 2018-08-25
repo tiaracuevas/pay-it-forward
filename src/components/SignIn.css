@@ -1,0 +1,48 @@
+.volunteer-login{
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    width: 500px;
+    border-radius: 20px;
+
+}
+
+input{
+    font-size:20px;
+    font-family: 'Fredoka One', cursive;
+}
+
+/* #signinbtn {
+    font-size:20px;
+    font-family: 'Fredoka One', cursive;
+} */
+
+.organization-login{
+    margin-top: 100px;
+    width: 500px;
+    height: 350px;   
+}
+
+.emailbox{
+    margin-right: 400px;
+    width:400px;
+    height: 35px;
+    border-radius: 2px;
+    margin-bottom:20px;
+    font-size: 15px;
+}
+
+.passwordbox{
+    margin-right: 400px;
+    width: 400px;
+    height: 35px;
+    border-radius: 2px;
+    margin-bottom:20px;
+    font-size: 15px;
+}
+
+.signinbtn{
+    background-color: #007bff;
+    font-size:17px;
+    font-family: 'Fredoka One', cursive;
+    color:black;
+}
