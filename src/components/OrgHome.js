@@ -30,7 +30,7 @@ class OrgHomePage extends Component {
         newState.push({
           id: opportunity,
           opportunityName: opportunities[opportunity].opportunityName,
-          time: opportunities[opportunity].timeframe,
+          timeframe: opportunities[opportunity].timeframe,
           date: opportunities[opportunity].date,
           description: opportunities[opportunity].description,
           address: opportunities[opportunity].address,
@@ -57,6 +57,34 @@ class OrgHomePage extends Component {
 
       <div>
         <OrgNavigation />
+      
+        <h1>Home</h1>
+        <Link to={routes.POST_OPPS}>Post Opportunities</Link>
+
+        <p>The Org Profile Page.</p>
+
+        <p>Hello, {firebase.auth().currentUser.displayName}</p>
+
+        <h1>My Posted Opportunities</h1>
+
+
+
+        <section className='display-opportunites'>
+          <div className="wrapper">
+            <ul>
+              {this.state.opportunities.map((opportunity) => {
+
+                return (
+                  <div key={opportunity.id}>
+                    <h3>{opportunity.opportunityName}</h3>
+                    <p>Date: {opportunity.date}</p>
+                    <p>Address: {opportunity.address}</p>
+                    <p>Time: {opportunity.timeframe}</p>
+                    <p>Description: {opportunity.description}</p>
+                    <p>Category: {opportunity.category}</p>
+                    <p>ID: {opportunity.id} </p>
+
+                    <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
 
         <div class="container">
           <div class="centered text-center">

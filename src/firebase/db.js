@@ -15,12 +15,13 @@ export const doCreateUser = (id, displayName, email) =>
 
 
 //create ORG in db
-export const doCreateOrg = (id, displayName, email, phoneNumber, missionStatement) =>
+export const doCreateOrg = (id, displayName, email, phoneNumber, missionStatement, website) =>
     db.ref(`organizations/${id}`).set({
         displayName,
         email,
         phoneNumber,
-        missionStatement
+        missionStatement,
+        website
     });
 
 export const postOpp = (id, opportunityName, date, numberOfVolunteers, timeframe, address, description, category, postedBy) =>

@@ -1,10 +1,100 @@
-.opportunities {
-  display: flex;
-  justify-content: center;
+.parallax {
+  background: lightgray;
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opportunities{
+  max-width: 550px;
+  background: white;
+  opacity: .8;
   margin-top: 10px;
-  border: 2px solid black;
-  border-radius: 10px;;
-  padding: 10px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+}
+
+.viewOppsh2{
+  font-family: 'Raleway:900', sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+  color: White;
+  padding-top: 100px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.viewOppsh5{
+  color: #99b83c;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  padding-bottom: 40px;
+  margin-left: 10px;
+}
+
+.icon{
+  margin-right: 5px;
+  color: #99b83c
+}
+
+.opportunityName{
+  display: flex;
+  justify-content: flex-start;
+  color: Black;
+  font-size: 30px;
+}
+
+.opportunityCategory{
+  display: flex;
+  justify-content: flex-start;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.opportunityDate{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.opportunityDescription{
+  margin-bottom: 10px;
+}
+
+.opportunitySignupButton {
+  color: white;
+  padding: 7px 7px;
+  font-size: 18px;
+  box-shadow: 0 4px 2px -2px gray;
+  background: black;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.mapButton{
+  color: white;
+  padding: 7px 7px;
+  font-size: 18px;
+  box-shadow: 0 4px 2px -2px gray;
+  background: black;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.buttonBox{
+  display: flex;
+  justify-content: space-around;
+}
+
+.opportunityBox{
+  display: flex;
+  justify-content: space-around;
 }
