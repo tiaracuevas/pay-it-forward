@@ -7,8 +7,11 @@ import {
 import * as firebase from 'firebase'
 import * as routes from '../constants/routes';
 import { auth, db } from '../firebase';
-import OrgNavigation from './OrgNavigation';
+import OrgNavigation from './OrgNavigation'
+import ImageUpload from './ImageUpload'
+
 import "./OrgSignUp.css";
+
 
 
 const OrgSignUpPage = ({ history }) =>
@@ -71,9 +74,14 @@ class OrgSignUpForm extends Component {
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });
                         history.push(routes.ORG_HOME);
-
+                        firebase.auth().currentUser.updateProfile({ displayName: displayName })
+                        window.location.reload();
                     })
-                    .then(firebase.auth().currentUser.updateProfile({ displayName: displayName }))
+                    // .then(() => {
+                    //     firebase.auth().currentUser.updateProfile({ displayName: displayName })
+                    //     window.location.reload();
+                        
+                    //  })
                     .catch(error => {
                         this.setState(byPropKey('error', error));
                     });
@@ -187,6 +195,7 @@ class OrgSignUpForm extends Component {
                     placeholder="Website"
                     className="orgSignUpInput"
                 />
+
             </div>   
             </div>
             <div className="row">

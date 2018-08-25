@@ -11,7 +11,10 @@ import * as routes from '../constants/routes';
 
 import { auth, db } from '../firebase';
 import Navigation from './Navigation';
+import ImageUpload from './ImageUpload'
+
 import "./SignUp.css";
+
 
 
 
@@ -29,6 +32,7 @@ const INITIAL_STATE = {
     passwordTwo: '',
     error: null,
     displayName: '',
+    photoURL: '',
 
 };
 
@@ -53,6 +57,7 @@ class SignUpForm extends Component {
             displayName,
             email,
             passwordOne,
+            photoURL
 
 
         } = this.state;
@@ -65,13 +70,20 @@ class SignUpForm extends Component {
             .then(authUser => {
 
 
-                db.doCreateUser(authUser.user.uid, displayName, email)
+                db.doCreateUser(authUser.user.uid, displayName, email, photoURL)
                     .then(() => {
                         this.setState({ ...INITIAL_STATE });
                         history.push(routes.HOME);
+                        firebase.auth().currentUser.updateProfile({ displayName: displayName })
+                        window.location.reload();
 
                     })
-                    .then(firebase.auth().currentUser.updateProfile({ displayName: displayName }))
+                //    .then(() => {
+                //        firebase.auth().currentUser.updateProfile({ displayName: displayName })
+                //        window.location.reload();
+                //     })
+                   
+                   
                     .catch(error => {
                         this.setState(byPropKey('error', error));
                     });
@@ -154,6 +166,7 @@ class SignUpForm extends Component {
                         placeholder="Confirm Password"
                         className="signUpVolInput"
                     />
+
                 </div>
                 </div>
                 <div className="row">

@@ -22,7 +22,8 @@ class ViewOppsPage extends React.Component {
     super(props);
 
     this.state = {
-      opportunities: []
+      opportunities: [],
+     
     };
 
 
@@ -47,17 +48,19 @@ class ViewOppsPage extends React.Component {
                     address: opportunities[opportunity].address,
                     category: opportunities[opportunity].category,
                     numberOfVolunteers: opportunities[opportunity].numberOfVolunteers,
+                    photoURL: opportunities[opportunity].photoURL
                 });
             }
             this.setState({
-                opportunities: newState
+                opportunities: newState,
+                
             });
         });
   
   };
 
 
-    SignUpOpp(opportunityName, date, address, category, description) {
+    SignUpOpp(opportunityName, date, address, category, description, photoURL) {
       var user = firebase.auth().currentUser;
         firebase.database().ref('users').child(user.uid + "/myopportunities")
         .push({
@@ -65,8 +68,10 @@ class ViewOppsPage extends React.Component {
           date: `${date}`,
           address: `${address}`,
           category: `${category}`,
-          description: `${description}`,   
+          description: `${description}`,
+          photoURL: `${photoURL}`,   
         })
+        
         
       }
       
@@ -74,6 +79,8 @@ class ViewOppsPage extends React.Component {
 
   
   render() {
+
+    
   
     return (
         
@@ -116,7 +123,8 @@ class ViewOppsPage extends React.Component {
             </div>
             </div>
            {/*} <p>ID: {opportunity.id} </p>*/}
-            <button className="opportunitySignupButton" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address)}>Sign Up</button>
+           <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} height="100" width="100" />
+            <button className="opportunitySignupButton" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address, opportunity.photoURL)}>Sign Up</button>
           </div>
         </div>
       </div>

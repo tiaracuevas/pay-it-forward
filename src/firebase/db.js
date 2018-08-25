@@ -6,10 +6,11 @@ import React from 'react';
 // User API
 
 //create user in db
-export const doCreateUser = (id, displayName, email) =>
+export const doCreateUser = (id, displayName, email, photoURL) =>
     db.ref(`users/${id}`).set({
         displayName,
         email,
+        photoURL
     });
 
 
@@ -24,7 +25,7 @@ export const doCreateOrg = (id, displayName, email, phoneNumber, missionStatemen
         website
     });
 
-export const postOpp = (id, opportunityName, date, numberOfVolunteers, timeframe, address, description, category, postedBy) =>
+export const postOpp = (id, opportunityName, date, numberOfVolunteers, timeframe, address, description, category, postedBy, photoURL) =>
     db.ref(`/opportunities`).push({
         opportunityName,
         date,
@@ -33,7 +34,8 @@ export const postOpp = (id, opportunityName, date, numberOfVolunteers, timeframe
         address,
         description,
         category,
-        postedBy
+        postedBy,
+        photoURL
     });
 
 
