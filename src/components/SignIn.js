@@ -6,6 +6,7 @@ import { PasswordForgetLink } from './PasswordForget';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 import Navigation from './Navigation';
+import "./SignIn.css"
 
 
 
@@ -13,7 +14,6 @@ import Navigation from './Navigation';
 const SignInPage = ({ history }) =>
   <div>
     <Navigation />
-    <h1>Sign In (Individual Sign In)</h1>
     <SignInForm history={history} />
     <SignUpLink />
     <PasswordForgetLink />
@@ -72,25 +72,36 @@ class SignInForm extends Component {
       email === '';
 
     return (
+      <div className="card container volunteer-login">
+
+        <h1 className="volheader">Volunteer Sign In</h1>
+        <p className="volheader">Please sign in to your volunteer user account.</p>
+      <hr/>
+
+      <div className="card-body volunteer-card-body">
       <form onSubmit={this.onSubmit}>
-        <input
+        <input className="emailbox"
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
+          className="volSignInInout"
         />
-        <input
+        <input className="passwordbox"
           value={password}
           onChange={event => this.setState(byPropKey('password', event.target.value))}
           type="password"
           placeholder="Password"
+          className="volSignInInout"
         />
-        <button disabled={isInvalid} type="submit">
+        <button className="btn btn-primary" id="signinbtn" disabled={isInvalid} type="submit">
           Sign In
         </button>
 
         { error && <p>{error.message}</p> }
       </form>
+      </div>
+      </div>
     );
   }
 }

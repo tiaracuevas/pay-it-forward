@@ -1,0 +1,14 @@
+.accordion {
+    font-family: 'Fredoka One', cursive;
+    font-size: 17px;
+  
+}
+.fa-chevron-circle-down{
+    padding-right: 15px;
+    font-size: 25px;
+    color: #28a745;
+}
+.section-title {
+    color: black;
+    font-size: 18px;
+}

@@ -33,6 +33,7 @@ const OrgAccountPage = () =>
         <ImageUpload />
         </div>
       </div>
+     </div> 
     }
   </AuthUserContext.Consumer>
 
