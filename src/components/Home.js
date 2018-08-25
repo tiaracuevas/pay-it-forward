@@ -119,7 +119,6 @@ class HomePage extends Component {
                               <div className="row">
                               <p className="myopps col-md-2">{opportunity.opportunityName}</p>
                               <p className="myopps col-md-2">{opportunity.date}</p>
-                              <p className="myopps col-md-2">{opportunity.timeframe}</p>
                               <p className="myopps col-md-2">{opportunity.address}</p>
                               <p className="myopps col-md-2">{opportunity.description}</p>
                               <p className="myopps col-md-2">{opportunity.category}</p>

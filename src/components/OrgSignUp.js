@@ -9,7 +9,6 @@ import * as routes from '../constants/routes';
 import { auth, db } from '../firebase';
 import OrgNavigation from './OrgNavigation'
 import ImageUpload from './ImageUpload'
-
 import "./OrgSignUp.css";
 
 
@@ -18,8 +17,8 @@ const OrgSignUpPage = ({ history }) =>
     <div>
         <OrgNavigation />
         <div className="parallax">
-        <h2>Thanks for joining us!</h2>
-        <h5>Sign up as an organization to start connecting with volunteers.</h5>
+        <h2 className="orgSignUph2">Thanks for joining us!</h2>
+        <h5 className="orgSignUph5">Sign up as an organization to start connecting with volunteers.</h5>
         <OrgSignUpForm history={history} />
         </div>
     </div>
