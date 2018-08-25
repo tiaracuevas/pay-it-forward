@@ -5,6 +5,9 @@ import AuthUserContext from './AuthUserContext';
 import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 
+import "./OrgNavigation.css"
+import payItForwardNoWords from "./payItForwardNoWords.png";
+
 const OrgNavigation = () =>
   <AuthUserContext.Consumer>
     {authUser => authUser
@@ -14,20 +17,45 @@ const OrgNavigation = () =>
   </AuthUserContext.Consumer>
 
 const NavigationAuth = () =>
-  <ul>
-    <li><Link to={routes.ORG_LANDING}>Home</Link></li>
-    <li><Link to={routes.ORG_HOME}>Profile</Link></li>
-    <li><Link to={routes.POST_OPPS}>Post Opportunties</Link></li>
-    <li><Link to={routes.ORG_ACCOUNT}>Account</Link></li>
-    <li><SignOutButton /></li>
-  </ul>
+<div>
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <img className= "logo" src= { payItForwardNoWords } alt="logo"/>
+    <a className="navbar-brand name" href="/">Pay it Forward</a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-link" id="orglanding">
+        <Link to={routes.ORG_LANDING}>Home</Link></li>
+      </ul>
+      <button className="btn btn-success navbar-btn" id="orghome">
+      <Link to={routes.ORG_HOME}>Profile</Link></button>
+      <button className="btn btn-primary navbar-btn"id="myaccount">
+      <Link to={routes.ORG_ACCOUNT}>My Account</Link></button>
+      <SignOutButton className="orgsignoutbtn"/>
+  </div>
+</nav>
+</div>
 
 
 const NavigationNonAuth = () =>
-  <ul>
-    <li><Link to={routes.LANDING}>Home</Link></li>
-    <li><Link to={routes.SIGN_IN}>Volunteer Sign In</Link></li>
-    <li><Link to={routes.ORG_SIGN_IN}>Organization Sign In</Link></li>
-  </ul>
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <img className= "logo" src= { payItForwardNoWords } alt="logo"/>
+      <a className="navbar-brand name" href="/">Pay it Forward</a>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav ml-auto">
+        <li className="nav-link" id="homesignin">
+        <Link to={routes.LANDING}>Home</Link></li>
+        <button type="button" className="btn btn-success navbar-btn navbtn" id="profilebtn">
+        <li><Link to={routes.SIGN_IN}>Volunteer Sign In</Link></li></button>
+        <button type="button" className="btn btn-primary navbtn"> 
+        <li><Link to={routes.ORG_SIGN_IN}>Organization Sign In</Link></li></button>
+      </ul>
+    </div>
+  </nav>
 
 export default OrgNavigation;

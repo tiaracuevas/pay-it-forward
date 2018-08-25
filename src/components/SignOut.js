@@ -6,6 +6,7 @@ const SignOutButton = () =>
   <button
     type="button"
     onClick={auth.doSignOut}
+    className="btn btn-warning navbar-btn"
   >
     Sign Out
   </button>

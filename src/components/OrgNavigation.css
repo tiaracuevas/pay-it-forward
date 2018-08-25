@@ -1,0 +1,37 @@
+
+.navbar {
+  margin-bottom: 30px;
+  font-family: 'Fredoka One', cursive;
+  border-bottom: 4px solid #ffc107;
+
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+a {
+  color: black;
+}
+
+#orglanding {
+  font-size: 18px;
+}
+
+#orghome {
+  margin-right: 10px;
+
+}
+
+#myaccount{
+  margin-right: 10px;
+}
+
+.orgsignoutbtn {
+  margin-right: 10px;
+
+}
+
+

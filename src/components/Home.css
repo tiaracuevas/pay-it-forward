@@ -1,0 +1,16 @@
+/* .myopps{
+  display: inline-block;
+} */
+
+.delete-btn{
+  width:78px;
+  height: 40px;
+  margin-top: 5px;
+  color: black;
+}
+
+.container{
+  margin-bottom: 10px;
+  /* border: 1px solid black; */
+  font-family: 'Fredoka One', cursive;
+}
