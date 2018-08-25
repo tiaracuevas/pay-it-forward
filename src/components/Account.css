@@ -2,17 +2,19 @@
     margin-left: 10px;
     font-size: 24px;
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .volAccountP {
     margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .accounth2 {
-    font-family: 'Raleway:900', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 70px;
     font-weight: bold;
-    color: White;
+    color: Gray;
     padding-top: 100px;
     margin-left: 10px;
     margin-right: 20px;
@@ -20,8 +22,13 @@
 
 .accounth5 {
     color: #99b83c;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 26px;
     padding-bottom: 40px;
     margin-left: 10px;
+}
+
+.profileImg {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }

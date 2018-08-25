@@ -80,20 +80,28 @@ class SignInForm extends Component {
 
       <div className="card-body volunteer-card-body">
       <form onSubmit={this.onSubmit}>
+      <div className="row">
+      <div className="col-sm-12">
         <input className="emailbox"
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
-          className="volSignInInout"
+          className="volSignInInput"
         />
+      </div>
+      </div>
+      <div className="row">
+      <div className="col-sm-12">  
         <input className="passwordbox"
           value={password}
           onChange={event => this.setState(byPropKey('password', event.target.value))}
           type="password"
           placeholder="Password"
-          className="volSignInInout"
+          className="volSignInInput"
         />
+      </div>
+      </div>  
         <button className="btn btn-primary" id="signinbtn" disabled={isInvalid} type="submit">
           Sign In
         </button>

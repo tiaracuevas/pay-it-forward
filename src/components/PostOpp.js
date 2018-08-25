@@ -183,7 +183,7 @@ class PostOppForm extends Component {
                 </div>
                 <div className="row">
                 <div className="col-sm-12">    
-                        Category:
+                    Category:
                         <select value={category} className="postOppsSelect" onChange={ event => this.setState(byPropKey('category', event.target.value))}>
                             <option value="default">Please select one...</option>
                             <option value="animals">Animals</option>

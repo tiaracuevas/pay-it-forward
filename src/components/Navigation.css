@@ -5,6 +5,20 @@
   border-bottom: 4px solid #ffc107;
 }
 
+.navigationA:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.navigationAHome{
+  color: black
+}
+
+.navigationAHome:hover{
+  text-decoration: none;
+  color: gray;
+}
+
 .navbar-nav {
   display: right;
 }
@@ -52,7 +66,11 @@
 
 #profilebtn{
   margin-right: 10px;
+  background: #99b83c;
+}
 
+#accountbtn{
+  background:#4a8ef9;
 }
 
 .navbtn {

@@ -27,12 +27,12 @@ const NavigationAuth = () =>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
         <li className="nav-link" id="homesignin">
-        <Link to={routes.LANDING} className="navigationA">Home</Link>
+        <Link to={routes.LANDING} className="navigationAHome">Home</Link>
         </li>
       </ul>
-        <button type="button" className="btn btn-success navbar-btn navbtn" id="profilebtn">
+        <button type="button" className="btn navbar-btn navbtn" id="profilebtn">
         <Link to={routes.HOME} className="navigationA">Profile</Link></button>
-        <button type="button" className="btn btn-primary navbar-btn navbtn account">
+        <button type="button" className="btn btn-primary navbar-btn navbtn account" id="accountbtn">
         <Link to={routes.ACCOUNT} className="navigationA">Account</Link></button>
         <SignOutButton className="signoutbtn"/>
 
@@ -50,7 +50,7 @@ const NavigationNonAuth = () =>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
-        <li className="nav-link" id="homesignin"><Link to={routes.LANDING} className="navigationA">Home</Link></li>
+        <li className="nav-link" id="homesignin"><Link to={routes.LANDING} className="navigationAHome">Home</Link></li>
         <button type="button" className="btn btn-success navbar-btn navbtn" id="profilebtn"><li><Link to={routes.SIGN_IN} className="navigationA">Volunteer Sign In</Link></li></button>
         <button type="button" className="btn btn-primary navbtn"> <li><Link to={routes.ORG_SIGN_IN} className="navigationA">Organization Sign In</Link></li></button>
       </ul>

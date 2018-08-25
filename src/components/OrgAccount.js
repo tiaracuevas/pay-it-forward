@@ -22,16 +22,16 @@ const OrgAccountPage = () =>
         <h5 className="orgAccounth5">View and edit your account information below.</h5>
         <p className="orgAccountP">Email: {authUser.email}</p>
         <p className="orgAccountP">Organization: {authUser.displayName}</p>
-       <p>Profile Photo:</p>
-        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" height="200" width="200" />
-        <h4 className="orgAccounth4">Forgot your password? No worries. Find it here.</h4>
-        <PasswordForgetForm />
-        <h4 className="orgAccounth4">Need to change your password? Do that right here.</h4>
-        <PasswordChangeForm />
+       <p className="profileImg">Profile Photo:</p>
+        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profileImg" height="200" width="200" />
         <div>
         <h2>Add your Logo</h2>
         <ImageUpload />
         </div>
+        <h4 className="orgAccounth4">Forgot your password? No worries. Find it here.</h4>
+        <PasswordForgetForm />
+        <h4 className="orgAccounth4">Need to change your password? Do that right here.</h4>
+        <PasswordChangeForm />
       </div>
      </div> 
     }

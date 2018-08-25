@@ -27,7 +27,7 @@ const NavigationAuth = () =>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
         <li className="nav-link" id="orglanding">
-        <Link to={routes.ORG_LANDING} className="orgNavigationA">Home</Link></li>
+        <Link to={routes.ORG_LANDING} className="orgNavigationAHome">Home</Link></li>
       </ul>
       <button className="btn btn-success navbar-btn orgNavigationA" id="orghome">
       <Link to={routes.ORG_HOME} className="orgNavigationA">Profile</Link></button>
@@ -49,7 +49,7 @@ const NavigationNonAuth = () =>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ml-auto">
         <li className="nav-link" id="homesignin">
-        <Link to={routes.LANDING} className="orgNavigationA">Home</Link></li>
+        <Link to={routes.LANDING} className="orgNavigationAHome">Home</Link></li>
         <button type="button" className="btn btn-success navbar-btn navbtn" id="profilebtn">
         <li><Link to={routes.SIGN_IN} className="orgNavigationA">Volunteer Sign In</Link></li></button>
         <button type="button" className="btn btn-primary navbtn"> 

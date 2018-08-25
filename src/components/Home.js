@@ -57,21 +57,17 @@ class HomePage extends Component {
       <div>
         <Navigation />
 
-        <h1>Home</h1>
-        <p>Hello, {firebase.auth().currentUser.displayName}</p>
-        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" height="200" width="200" />
-
-        <p><Link to={routes.VIEW_OPPS}>All Opportunities</Link></p>
-
-        <p>This is like the profile page.</p>
-
-
-
-        <h1>My Opportunities</h1>
-
+        <div className="headerBox">
+        <div className="row">
+        <div className="col-sm-12">
+        <h2 className="homeh2">Hello, <br></br> {firebase.auth().currentUser.displayName}</h2>
+        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
+        </div>
+        </div>
+        </div>
+        
         <div class="container">
           <div class="centered text-center">
-            <h1>Home</h1>
             <div class="card ">
               <div class="card-header">
                 <ul
@@ -87,7 +83,7 @@ class HomePage extends Component {
                       role="tab"
                       aria-controls="AllOpportunities"
                       aria-selected="false">
-                      <Link to={routes.VIEW_OPPS}>All Opportunities</Link>
+                      <Link to={routes.VIEW_OPPS} className="allOpps">All Opportunities</Link>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -121,13 +117,14 @@ class HomePage extends Component {
                             <div className="container">
                               <div key={opportunity.id}>
                               <div className="row">
-                              <h3 className="col-md-2">{opportunity.opportunityName}</h3>
-                              <p className="myopps col-md-2">Date: {opportunity.date}</p>
-                              <p className="myopps col-md-2">Address: {opportunity.address}</p>
-                              <p className="myopps col-md-2">Description: {opportunity.description}</p>
-                              <p className="myopps col-md-2">Category: {opportunity.category}</p>
+                              <p className="myopps col-md-2">{opportunity.opportunityName}</p>
+                              <p className="myopps col-md-2">{opportunity.date}</p>
+                              <p className="myopps col-md-2">{opportunity.timeframe}</p>
+                              <p className="myopps col-md-2">{opportunity.address}</p>
+                              <p className="myopps col-md-2">{opportunity.description}</p>
+                              <p className="myopps col-md-2">{opportunity.category}</p>
 
-                              <button className="btn btn-primary delete-btn"
+                              <button className="btn delete-btn"
                                 onClick={() =>
                                   this.removeOpportunity(opportunity.id)}>Delete
                               </button>
