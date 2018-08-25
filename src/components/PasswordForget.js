@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { auth } from '../firebase';
 import "./PasswordForget.css";
+import Navigation from "./Navigation";
 
 const PasswordForgetPage = () =>
   <div>
-    <h1>PasswordForget</h1>
+    <Navigation />
+    <h1>Enter your email to retrieve your password</h1>
     <PasswordForgetForm />
   </div>
 

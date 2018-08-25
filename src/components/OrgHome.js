@@ -58,19 +58,11 @@ class OrgHomePage extends Component {
       <div>
         <OrgNavigation />
       
-        <h1>Home</h1>
-        <Link to={routes.POST_OPPS}>Post Opportunities</Link>
-
-        <p>The Org Profile Page.</p>
-
-        <p>Hello, {firebase.auth().currentUser.displayName}</p>
-        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" height="200" width="200" />
-
-        <h1>My Posted Opportunities</h1>
+        <h2 className="homeh2">Hello, {firebase.auth().currentUser.displayName}</h2>
+        <img src={firebase.auth().currentUser.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} alt="Uploaded images" className="profImage" height="200" width="200" />
         
         <div class="container">
           <div class="centered text-center">
-          <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
           <div class="card ">
               <div class="card-header">
                 <ul
@@ -86,7 +78,7 @@ class OrgHomePage extends Component {
                       role="tab"
                       aria-controls="PostOpportunities"
                       aria-selected="false">
-                      <Link to={routes.POST_OPPS}>Post an Opportunity</Link>
+                      <Link to={routes.POST_OPPS} className="postOpps">Post an Opportunity</Link>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -97,7 +89,7 @@ class OrgHomePage extends Component {
                     href="#All Opportunities"
                     role="tab"
                     aria-controls="profile"
-                    aria-selected="true">All Opportunities
+                    aria-selected="true" >All Opportunities
                     </a>
                   </li>
                 </ul>
@@ -121,16 +113,13 @@ class OrgHomePage extends Component {
                         <div className="container">
                         <div key={opportunity.id}>
                         <div className="row all">
-                          <h5 className="text-center col-xs oppName">{opportunity.opportunityName}</h5>
-                          <p className="text-center myopps col-md-2 col-md-offset">Date: {opportunity.date}</p>
-                          <p className="text-center myopps col-md-2 col-md-offset-2">Address: {opportunity.address}</p>
-                          <p className="text-center myopps col-md-2 col-md-offset-2">Time: {opportunity.timeframe}</p>
-                          <p className="text-center myopps col-md-2 col-md-offset-2">Description: {opportunity.description}</p>
-                          <p className="text-center myopps col-md-2 col-md-offset-2">Category: {opportunity.category}</p>
-                          {/* <p className="myopps col-md-2">ID: {opportunity.id} </p> */}
-
-                          <button className="btn btn-primary delete-btn" onClick={() => this.removeOpportunity(opportunity.id)}>Delete
-                          </button>
+                          <p className="col-md" id="opportunityName">{opportunity.opportunityName}</p>
+                          <p className="myopps col-md-2">{opportunity.date}</p>
+                          <p className="myopps col-md-2">{opportunity.address}</p>
+                          <p className="myopps col-md-2">{opportunity.timeframe}</p>
+                          <p className="myopps col-md-2">{opportunity.description}</p>
+                          <p className="myopps col-md-2">{opportunity.category}</p>
+                          <button className="btn btn-primary delete-btn col-md-2 deleteOppButton" onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
                           </div>
                           </div>
                         </div>

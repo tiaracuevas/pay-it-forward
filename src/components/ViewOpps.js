@@ -103,10 +103,15 @@ class ViewOppsPage extends React.Component {
         <div className="container">
           <div key={opportunity.id}>
             <div className="row">
-              <div className="col-sm-12">
+              <div className="col-sm-6">
                 <div className="opportunityName">{opportunity.opportunityName}</div>
                 <div className="opportunityCategory" >{opportunity.category}</div>
-            </div>
+              </div> 
+              <div className="col-sm-6"> 
+                <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} className="profileImg" height="100" width="100" />
+              </div>
+          </div>    
+                
           </div>
           <div className="row">
             <div className="col-sm-12">
@@ -119,15 +124,13 @@ class ViewOppsPage extends React.Component {
             </div>
             <div className="row">
             <div className="col-sm-12">
-            <p>{opportunity.description}</p>
+            <p className="opportunityDescription">{opportunity.description}</p>
             </div>
             </div>
            {/*} <p>ID: {opportunity.id} </p>*/}
-           <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} height="100" width="100" />
             <button className="opportunitySignupButton" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address, opportunity.photoURL)}>Sign Up</button>
           </div>
         </div>
-      </div>
         )
       })}
     </ul>

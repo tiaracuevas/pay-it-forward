@@ -16,17 +16,32 @@
   color: black;
 }
 
+.orgNavigationA:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.orgNavigationAHome{
+  color: black
+}
+
+.orgNavigationAHome:hover{
+  text-decoration: none;
+  color: gray;
+}
+
 #orglanding {
   font-size: 18px;
 }
 
 #orghome {
   margin-right: 10px;
-
+  background: #99b83c;
 }
 
 #myaccount{
   margin-right: 10px;
+  background: #4a8ef9;
 }
 
 .orgsignoutbtn {

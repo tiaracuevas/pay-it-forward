@@ -1,5 +1,5 @@
 .parallax {
-  background: lightgray;
+  background: white;
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -9,7 +9,7 @@
 
 .opportunities{
   max-width: 550px;
-  background: white;
+  background: rgba(231, 229, 229, 0.849);
   opacity: .8;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -19,10 +19,10 @@
 }
 
 .viewOppsh2{
-  font-family: 'Raleway:900', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 70px;
   font-weight: bold;
-  color: White;
+  color: Gray;
   padding-top: 100px;
   margin-left: 10px;
   margin-right: 20px;
@@ -30,7 +30,7 @@
 
 .viewOppsh5{
   color: #99b83c;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 26px;
   padding-bottom: 40px;
   margin-left: 10px;
@@ -48,10 +48,17 @@
   font-size: 30px;
 }
 
+.profileImg{
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-bottom: 20px;
+}
+
 .opportunityCategory{
   display: flex;
   justify-content: flex-start;
-  color: black;
+  color: #99b83c;
   margin-bottom: 10px;
 }
 
@@ -70,10 +77,10 @@
   padding: 7px 7px;
   font-size: 18px;
   box-shadow: 0 4px 2px -2px gray;
-  background: black;
-  font-family: 'Raleway', sans-serif;
-  border-radius: 10px;
-  width: 100px;
+  background: #4a8ef9;
+  font-family: 'Fredoka One', sans-serif;
+  border-radius: 5px;
+  width: 90px;
   margin-bottom: 10px;
 }
 
@@ -97,4 +104,9 @@
 .opportunityBox{
   display: flex;
   justify-content: space-around;
+}
+
+.opportunityDescription{
+  display: flex;
+  justify-content: flex-start;
 }

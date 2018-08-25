@@ -5,11 +5,12 @@ import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 import { OrgSignUpLink } from './OrgSignUp';
 import "./OrgSignIn.css"
+import OrgNavigation from "./OrgNavigation";
 
 
 const OrgSignInPage = ({ history }) =>
   <div>
-    <h1>Sign In (Organization Sign In)</h1>
+    <OrgNavigation />
     <OrgSignInForm history={history} />
     
     <OrgSignUpLink />
@@ -78,6 +79,8 @@ class OrgSignInForm extends Component {
 
       <div className="card-body organization-card-body">
       <form onSubmit={this.onSubmit}>
+      <div className="row">
+      <div className="col-sm-12">
         <input className="emailbox"
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
@@ -85,6 +88,10 @@ class OrgSignInForm extends Component {
           placeholder="Email Address"
           className="orgSignInInput"
         />
+        </div>
+      </div>  
+      <div className="row">
+      <div className="col-sm-12">
         <input className="passwordbox"
           value={password}
           onChange={event => this.setState(byPropKey('password', event.target.value))}
@@ -92,6 +99,8 @@ class OrgSignInForm extends Component {
           placeholder="Password"
           className="orgSignInInput"
         />
+      </div>
+      </div>  
         <button disabled={isInvalid} type="submit" className="signinbtn btn btn-primary">
           Sign In
         </button>
