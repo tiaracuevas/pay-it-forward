@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import React from 'react';
 import withAuthorization from './withAuthorization';
 
-
+import "./ViewOpps.css";
 
 import Navigation from './Navigation';
 import '../components/App.css';
@@ -10,6 +10,12 @@ import './ViewOpps.css'
 
 import firebase from 'firebase/app';
 import 'firebase/database'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
+
 
 class ViewOppsPage extends React.Component {
     
@@ -76,8 +82,8 @@ class ViewOppsPage extends React.Component {
          
         <Navigation />
    
-        
-         <h1>Go ahead and find your way to give back!</h1>
+      <div className="parallax">
+         <h2>Go ahead and find your <br></br> way to give back!</h2>
          <h5>Just click the sign up button and get volunteering.</h5>
 
         
@@ -86,33 +92,32 @@ class ViewOppsPage extends React.Component {
              <ul>
             {this.state.opportunities.map((opportunity) => {
         return (
+
     <div className="opportunities pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center"> 
         <div className="container">
           <div key={opportunity.id}>
             <div className="row">
               <div className="col-sm-12">
-                <h3>{opportunity.opportunityName}</h3>
-                <p>{opportunity.category}</p>
+                <div className="opportunityName">{opportunity.opportunityName}</div>
+                <div className="opportunityCategory" >{opportunity.category}</div>
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-4">
-              <p>Date: {opportunity.date}</p>
-            </div>
-            <div className="col-sm-4">
-            <p>Address: {opportunity.address}</p>
-            </div>
-            <div className="col-sm-4">
-            <p>Time: {opportunity.timeframe}</p>
-            </div>
+            <div className="col-sm-12">
+              <div className="opportunityBox">
+                <p className="opportunityDate"><FontAwesomeIcon  className="icon" icon={faCalendarAlt} />{opportunity.date}</p>
+                <p className="opportunityAddress"><FontAwesomeIcon  className="icon" icon={faClock} />{opportunity.address}</p>
+                <p className="opportunityTime"><FontAwesomeIcon  className="icon" icon={faMapMarkerAlt} />{opportunity.timeframe}</p>
+              </div>
+              </div>
             </div>
             <div className="row">
             <div className="col-sm-12">
-            <p>Description: {opportunity.description}</p>
+            <p>{opportunity.description}</p>
             </div>
             </div>
            {/*} <p>ID: {opportunity.id} </p>*/}
-            <button onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address)}>Sign Up</button>
+            <button className="opportunitySignupButton" onClick={() => this.SignUpOpp(opportunity.opportunityName, opportunity.date, opportunity.description, opportunity.category, opportunity.address)}>Sign Up</button>
           </div>
         </div>
       </div>
@@ -123,6 +128,7 @@ class ViewOppsPage extends React.Component {
 </section>
 
       </div>
+</div>      
     
       
     );
