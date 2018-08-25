@@ -17,8 +17,11 @@ import './PostOpps.css';
 const PostOppPage = ({ history }) =>
     <div>
         <OrgNavigation />
-        <h1>Post Opp Page</h1>
+        <div className="parallax">
+        <h2>Need volunteers? <br></br> We've got you covered.</h2>
+        <h5>Post your organization's opportunities below.</h5>
         <PostOppForm history={history} />
+        </div>
     </div>
 
 
@@ -112,6 +115,8 @@ class PostOppForm extends Component {
 
                 <div className="container">
                     <form onSubmit={this.onSubmit}>
+                    <div className="row">
+                        <div className="col-sm-12">
                         <div className="form-group">
                             <input
                                 value={opportunityName}
@@ -120,6 +125,10 @@ class PostOppForm extends Component {
                                 placeholder="Opportunity name"
                             />
                         </div>
+                        </div>
+                        </div>
+                        <div className="row">
+                        <div className="col-sm-4">
                         <div className="form-group">
                             <input
                                 value={date}
@@ -128,14 +137,9 @@ class PostOppForm extends Component {
                                 placeholder="Date"
                             />
                         </div>
-                        <div className="form-group">
-                            <input
-                                value={numberOfVolunteers}
-                                onChange={event => this.setState(byPropKey('numberOfVolunteers', event.target.value))}
-                                type="text"
-                                placeholder="Number of volunteers"
-                            />
                         </div>
+
+                        <div className="col-sm-4">
                         <div className="form-group">
                             <input
                                 value={timeframe}
@@ -144,6 +148,22 @@ class PostOppForm extends Component {
                                 placeholder="Time"
                             />
                         </div>
+                        </div>
+                        
+                        <div className="col-sm-4">
+                        <div className="form-group">
+                            <input
+                                value={numberOfVolunteers}
+                                onChange={event => this.setState(byPropKey('numberOfVolunteers', event.target.value))}
+                                type="text"
+                                placeholder="Number of volunteers"
+                            />
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col-sm-12">
                         <div className="form-group">
                             <input
                                 value={address}
@@ -152,6 +172,10 @@ class PostOppForm extends Component {
                                 placeholder="Address"
                             />
                         </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-sm-12">
                         <div className="form-group">
                             <input
                                 value={description}
@@ -160,18 +184,25 @@ class PostOppForm extends Component {
                                 placeholder="Event description"
                             />
                         </div>
+                        </div>
+                        </div>
                         <div className="form-group">
                             Category:
                 <select value={category} onChange={event => this.setState(byPropKey('category', event.target.value))}>
-                                <option value="default">Please select one...</option>
-                                <option value="category1">Category1</option>
-                                <option value="category2">Category2</option>
-                                <option value="category3">Category3</option>
-                                <option value="category4">Category4</option>
+                            <option value="default">Please select one...</option>
+                            <option value="animals">Animals</option>
+                            <option value="children">Children</option>
+                            <option value="community">Community</option>
+                            <option value="compandtech">Computers and Technology</option>
+                            <option value="education">Education</option>
+                            <option value="medical">Medical</option>
+                            <option value="seniors">Seniors</option>
+                            <option value="teens">Teens</option>
+                            <option value="other">Other</option>
                             </select>
                         </div>
                         <div className="form-group">
-                            <button disabled={isInvalid} type="submit" className="greenButton">
+                            <button disabled={isInvalid} type="submit" className="postOppButton">
                                 Add Opportunity
                 </button>
                         </div>
