@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { auth } from '../firebase';
+import "./PasswordForget.css";
 
 const PasswordForgetPage = () =>
   <div>
@@ -54,9 +55,10 @@ class PasswordForgetForm extends Component {
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
+          className="passwordForgetFormInput"
         />
-        <button disabled={isInvalid} type="submit">
-          Reset My Password
+        <button disabled={isInvalid} type="submit" className="passwordForgetButton">
+          Get my Password
         </button>
 
         { error && <p>{error.message}</p> }

@@ -6,7 +6,6 @@ import "./ViewOpps.css";
 
 import Navigation from './Navigation';
 import '../components/App.css';
-import './ViewOpps.css'
 
 import firebase from 'firebase/app';
 import 'firebase/database'
@@ -83,8 +82,8 @@ class ViewOppsPage extends React.Component {
         <Navigation />
    
       <div className="parallax">
-         <h2>Go ahead and find your <br></br> way to give back!</h2>
-         <h5>Just click the sign up button and get volunteering.</h5>
+         <h2 className="viewOppsh2">Go ahead and find your <br></br> way to give back!</h2>
+         <h5 className="viewOppsh5">Just click the sign up button and get volunteering.</h5>
 
         
          <section className='display-opportunites'>
@@ -127,7 +126,7 @@ class ViewOppsPage extends React.Component {
   </div>
 </section>
 
-      </div>
+</div>
 </div>      
     
       
