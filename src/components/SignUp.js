@@ -21,7 +21,6 @@ import "./SignUp.css";
 
 const SignUpPage = ({ history }) =>
     <div>
-        <h1>SignUp</h1>
         <SignUpForm history={history} />
     </div>
 
@@ -121,8 +120,8 @@ class SignUpForm extends Component {
             <div>
                 <Navigation />
                 <div className="parallax">
-                <h2>Ready to start <br></br> paying it forward?</h2>
-                <h5>Fill out the form below to join us in giving back!</h5>
+                <h2 className="signUph2">Ready to start <br></br> paying it forward?</h2>
+                <h5 className="signUph5">Fill out the form below to join us in giving back!</h5>
                 <form className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center signUpForm" onSubmit={this.onSubmit}>
                 <div className="row">
                 <div className="col-sm-12">

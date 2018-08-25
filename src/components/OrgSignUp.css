@@ -15,3 +15,22 @@
   width: 100px;
   margin-bottom: 100px;
 }
+
+
+.orgSignUph2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: Gray;
+    padding-top: 100px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  .orgSignUph5{
+    color: #99b83c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    padding-bottom: 40px;
+    margin-left: 10px;
+  }
