@@ -7,7 +7,7 @@ import {
 import * as firebase from 'firebase'
 import * as routes from '../constants/routes';
 import { auth, db } from '../firebase';
-import OrgNavigation from './OrgNavigation'
+import OrgNavigation from './OrgNavigation';
 import "./OrgSignUp.css";
 
 
@@ -119,6 +119,7 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('displayName', event.target.value))}
                     type="text"
                     placeholder="Organization name"
+                    className="orgSignUpInput"
                 />
             </div>   
             </div>
@@ -129,6 +130,7 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('email', event.target.value))}
                     type="text"
                     placeholder="Email Address"
+                    className="orgSignUpInput"
                 />
             </div>   
             </div>
@@ -139,6 +141,7 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
                     type="password"
                     placeholder="Password"
+                    className="orgSignUpInput"
                 />
             </div>   
             </div>
@@ -149,6 +152,7 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
                     type="password"
                     placeholder="Confirm Password"
+                    className="orgSignUpInput"
                 />
             </div>   
             </div>
@@ -159,6 +163,7 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('phoneNumber', event.target.value))}
                     type="tel"
                     placeholder="Phone Number"
+                    className="orgSignUpInput"
                 />
             </div>   
             </div>
@@ -169,6 +174,7 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('missionStatement', event.target.value))}
                     type="text"
                     placeholder="Mission Statement"
+                    className="orgSignUpInput"
                 />
             </div>   
             </div>
@@ -179,6 +185,7 @@ class OrgSignUpForm extends Component {
                     onChange={event => this.setState(byPropKey('website', event.target.value))}
                     type="text"
                     placeholder="Website"
+                    className="orgSignUpInput"
                 />
             </div>   
             </div>

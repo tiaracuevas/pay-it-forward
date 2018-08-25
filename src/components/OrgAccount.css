@@ -1,0 +1,27 @@
+.orgAccounth4 {
+    margin-left: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.orgAccountP {
+    margin-left: 10px;
+}
+
+.orgAccounth2 {
+    font-family: 'Raleway:900', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: White;
+    padding-top: 100px;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+.orgAccounth5 {
+    color: #99b83c;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    padding-bottom: 40px;
+    margin-left: 10px;
+}
