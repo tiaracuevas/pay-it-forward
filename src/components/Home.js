@@ -69,23 +69,6 @@ class HomePage extends Component {
 
         <h1>My Opportunities</h1>
 
-
-        <section className='display-my-opportunities'>
-          <div className="wrapper">
-            <ul>
-              {this.state.opportunities.map((opportunity) => {
-                return (
-                  <div key={opportunity.id}>
-                    <h3>{opportunity.opportunityName}</h3>
-                    <p>Date: {opportunity.date}</p>
-                    <p>Address: {opportunity.address}</p>
-                    <p>Description: {opportunity.description}</p>
-                    <p>Category: {opportunity.category}</p>
-                    <img src={opportunity.photoURL || "//style.anu.edu.au/_anu/4/images/placeholders/person.png"} height="100" width="100" />
-
-
-                    <button onClick={() => this.removeOpportunity(opportunity.id)}>Delete</button>
-
         <div class="container">
           <div class="centered text-center">
             <h1>Home</h1>
@@ -186,7 +169,7 @@ class HomePage extends Component {
       </div>
     );
   }
-}
+              }
 
 const authCondition = authUser => !!authUser;
 
