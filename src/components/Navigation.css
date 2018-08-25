@@ -1,0 +1,83 @@
+.navbar {
+  /* margin-bottom: 30px; */
+  font-family: 'Fredoka One', cursive;
+  font-size: 17px;
+  border-bottom: 4px solid #ffc107;
+}
+
+.navbar-nav {
+  display: right;
+}
+
+.home {
+  padding-top: 23px;
+  padding-left: 200px;
+}
+
+.volunteerbtn {
+  padding-top: 0px;
+  padding-bottom: 40px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.orgbtn {
+  padding-top:0px;
+  padding-bottom: 40px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.signoutbtn{
+  height: 30px;
+  padding-top:0px;
+  padding-bottom: 40px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+a {
+  color: black;
+}
+
+.name {
+  font-size: 25px;
+}
+
+#profilebtn{
+  margin-right: 10px;
+
+}
+
+.navbtn {
+  display: inline;
+  /* padding-bottom: 30px; */
+}
+
+.signoutbtn {
+  height: 30px;
+  padding-top: 4px;
+  margin-left: 10px;
+}
+
+#homesignin {
+  /* margin-top: 10px;
+  padding-top: 0px;
+  margin-right: 10px; */
+  font-size: 18px;
+}
+
+#homenosignin{
+  padding-top: 0px;
+  font-size: 20px;
+}
+
+.account {
+  margin-right: 10px;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { auth } from '../firebase';
+import "./PasswordChange.css";
 
 const byPropKey = (propertyName, value) => () => ({
   [propertyName]: value,
@@ -51,14 +52,16 @@ class PasswordChangeForm extends Component {
           onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
           type="password"
           placeholder="New Password"
+          className="passwordChangeInput"
         />
         <input
           value={passwordTwo}
           onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
           type="password"
           placeholder="Confirm New Password"
+          className="passwordChangeInput"
         />
-        <button disabled={isInvalid} type="submit">
+        <button disabled={isInvalid} type="submit" className="passwordChangeButton">
           Reset My Password
         </button>
 

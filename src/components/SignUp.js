@@ -13,6 +13,8 @@ import { auth, db } from '../firebase';
 import Navigation from './Navigation';
 import ImageUpload from './ImageUpload'
 
+import "./SignUp.css";
+
 
 
 
@@ -118,40 +120,66 @@ class SignUpForm extends Component {
         return (
             <div>
                 <Navigation />
-                <form onSubmit={this.onSubmit}>
+                <div className="parallax">
+                <h2>Ready to start <br></br> paying it forward?</h2>
+                <h5>Fill out the form below to join us in giving back!</h5>
+                <form className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center signUpForm" onSubmit={this.onSubmit}>
+                <div className="row">
+                <div className="col-sm-12">
                     <input
                         value={displayName}
                         onChange={event => this.setState(byPropKey('displayName', event.target.value))}
                         type="text"
                         placeholder="Full Name"
+                        className="signUpVolInput"
                     />
+                </div>
+                </div>
+                <div className="row">
+                <div className="col-sm-12">    
                     <input
                         value={email}
                         onChange={event => this.setState(byPropKey('email', event.target.value))}
                         type="text"
                         placeholder="Email Address"
+                        className="signUpVolInput"
                     />
+                </div>
+                </div>
+                <div className="row">
+                <div className="col-sm-12">    
                     <input
                         value={passwordOne}
                         onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
                         type="password"
                         placeholder="Password"
+                        className="signUpVolInput"
                     />
+                </div>
+                </div>
+                <div className="row">
+                <div className="col-sm-12">    
                     <input
                         value={passwordTwo}
                         onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
                         type="password"
                         placeholder="Confirm Password"
+                        className="signUpVolInput"
                     />
 
-                    
-
-                    <button disabled={isInvalid} type="submit">
+                </div>
+                </div>
+                <div className="row">
+                <div className="col-sm-12">        
+                    <button disabled={isInvalid} type="submit" className="signUpButtonVol">
                         Sign Up
                 </button>
+                </div>
+                </div>
 
                     {error && <p>{error.message}</p>}
                 </form>
+                </div>
             </div>
         );
     }

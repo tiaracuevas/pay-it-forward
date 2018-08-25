@@ -1,0 +1,31 @@
+.parallax {
+    background: url("./images/trianglebackgroundlightgray.png");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .signUpForm{
+      padding-bottom: 100px;
+  }
+
+  .signUpVolInput{
+    min-width: 400px;
+    margin-bottom: 20px;
+    height: 50px;
+  }
+
+  .signUpButtonVol{
+    color: white;
+    padding: 7px 7px;
+    font-size: 18px;
+    box-shadow: 0 4px 2px -2px gray;
+    background: #99b83c;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }

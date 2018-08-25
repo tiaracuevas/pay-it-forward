@@ -10,12 +10,18 @@ import { auth, db } from '../firebase';
 import OrgNavigation from './OrgNavigation'
 import ImageUpload from './ImageUpload'
 
+import "./OrgSignUp.css";
+
+
 
 const OrgSignUpPage = ({ history }) =>
     <div>
         <OrgNavigation />
-        <h1>Org SignUp</h1>
+        <div className="parallax">
+        <h2>Thanks for joining us!</h2>
+        <h5>Sign up as an organization to start connecting with volunteers.</h5>
         <OrgSignUpForm history={history} />
+        </div>
     </div>
 
 
@@ -53,7 +59,6 @@ class OrgSignUpForm extends Component {
             phoneNumber,
             missionStatement,
             website
-
 
         } = this.state;
 
@@ -113,61 +118,96 @@ class OrgSignUpForm extends Component {
             displayName === '';
 
         return (
+        <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <form onSubmit={this.onSubmit}>
+            <div className="row">
+            <div className="col-sm-12">
                 <input
                     value={displayName}
                     onChange={event => this.setState(byPropKey('displayName', event.target.value))}
                     type="text"
                     placeholder="Organization name"
+                    className="orgSignUpInput"
                 />
+            </div>   
+            </div>
+            <div className="row">
+            <div className="col-sm-12">    
                 <input
                     value={email}
                     onChange={event => this.setState(byPropKey('email', event.target.value))}
                     type="text"
                     placeholder="Email Address"
+                    className="orgSignUpInput"
                 />
+            </div>   
+            </div>
+            <div className="row">
+            <div className="col-sm-12">   
                 <input
                     value={passwordOne}
                     onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
                     type="password"
                     placeholder="Password"
+                    className="orgSignUpInput"
                 />
+            </div>   
+            </div>
+            <div className="row">
+            <div className="col-sm-12">   
                 <input
                     value={passwordTwo}
                     onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
                     type="password"
                     placeholder="Confirm Password"
+                    className="orgSignUpInput"
                 />
-
+            </div>   
+            </div>
+            <div className="row">
+            <div className="col-sm-12">   
                 <input
                     value={phoneNumber}
                     onChange={event => this.setState(byPropKey('phoneNumber', event.target.value))}
                     type="tel"
                     placeholder="Phone Number"
+                    className="orgSignUpInput"
                 />
-
+            </div>   
+            </div>
+            <div className="row">
+            <div className="col-sm-12">   
                 <input
                     value={missionStatement}
                     onChange={event => this.setState(byPropKey('missionStatement', event.target.value))}
                     type="text"
                     placeholder="Mission Statement"
+                    className="orgSignUpInput"
                 />
-
+            </div>   
+            </div>
+            <div className="row">
+            <div className="col-sm-12">   
                 <input
                     value={website}
                     onChange={event => this.setState(byPropKey('website', event.target.value))}
                     type="text"
                     placeholder="Website"
+                    className="orgSignUpInput"
                 />
 
-                
-
-                <button disabled={isInvalid} type="submit">
+            </div>   
+            </div>
+            <div className="row">
+            <div className="col-sm-12">   
+                <button disabled={isInvalid} type="submit" className="orgSignUpButton">
                     Sign Up
                 </button>
-
+            </div>
+            </div>
                 {error && <p>{error.message}</p>}
             </form>
+         </div>   
         );
     }
 }
